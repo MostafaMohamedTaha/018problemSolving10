@@ -199,3 +199,4 @@
 // let divide=()=>result.innerHTML=f.value/s.value
 // console.log(f);
 //(((((((((((((((((problem 10)))))))))))))))))
+

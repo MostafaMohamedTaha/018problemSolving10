@@ -93,9 +93,8 @@
 // console.log(a(200))
 //((((((((((((((((problem 20))))))))))))))))
 // Write a JavaScript program to check from two given integers, whether one is positive and another one is negative
-let f=(n1,n2)=>n1<0&&n2>0||n1>0&&n2<0
-console.log(f(1,-1));
-console.log(f(-1,-1));
-console.log(f(-1,1));
-console.log(f(1,1));
-
+// let f=(n1,n2)=>n1<0&&n2>0||n1>0&&n2<0
+// console.log(f(1,-1));
+// console.log(f(-1,-1));
+// console.log(f(-1,1));
+// console.log(f(1,1));
