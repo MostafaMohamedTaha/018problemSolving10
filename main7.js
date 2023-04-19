@@ -62,8 +62,8 @@
 // console.log(a([0, 8, -11]));
 //((((((((((((((((70))))))))))))))))
 // Write a JavaScript program to rotate the elements left of a given array of integers of length 3.
-let a=(el)=>[el[1],el[2],el[0]]
-console.log(a([3, 4, 5]));  
-console.log(a([0, -1, 2]));  
-console.log(a([7, 6, 5])); 
+// let a=(el)=>[el[1],el[2],el[0]]
+// console.log(a([3, 4, 5]));  
+// console.log(a([0, -1, 2]));  
+// console.log(a([7, 6, 5])); 
 

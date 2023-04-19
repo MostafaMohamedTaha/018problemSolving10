@@ -1,0 +1,12 @@
+{
+  "name": "019problemsol",
+  "version": "1.0.0",
+  "main": "main1.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
