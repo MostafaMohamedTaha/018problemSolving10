@@ -35,10 +35,10 @@
 // Write a JavaScript program to find the maximum difference among all possible pairs of a given array of integers.
 // let a=(arr)=>{
 //     var min=0,max=0;
-//     for (let index = 0; index < arr.length; index++) {
+//     // for (let index = 0; index < arr.length; index++) {
 //         max=Math.max(...arr);
 //         min=Math.min(...arr);
-//     }
+//     // }
 //     return Math.abs(max-min)
 // }
 // console.log(a([1, 2, 3, 8, 9]))
