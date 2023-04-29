@@ -76,15 +76,15 @@
 //   var ctr = 0;
 //   for (var i = 0; i < arr.length; i++) {
 //       for (var j = i + 1; j < arr.length; j++) {
-//           if (arr[i] > arr[j]) 
+//           if (arr[i] > arr[j])
 //             ctr++;
 //       }
 //   }
 //   return ctr;
 // }
 
-// console.log(a([0, 3, 2, 5, 9]));   
-// console.log(a([1, 5, 4, 3]));   
+// console.log(a([0, 3, 2, 5, 9]));
+// console.log(a([1, 5, 4, 3]));
 // console.log(a([10, 30, 20, -10]));
 // let a=(arr)=>{
 //   let counter=0;
@@ -94,14 +94,16 @@
 //     }
 //   }
 //   return counter
-// }  
-// console.log(a([0, 3, 2, 5, 9]));   
-// console.log(a([1, 5, 4, 3]));   
+// }
+// console.log(a([0, 3, 2, 5, 9]));
+// console.log(a([1, 5, 4, 3]));
 // console.log(a([10, 30, 20, -10]));
 //((((((((((((((3))))))))))))))
 // Write a JavaScript program to find the maximum number of a given positive integer by deleting exactly one digit of the given number.
+
 // let a='ssdsdf'
 // console.log(a.slice(0,-1))
+
 // let a=(num)=> {
 //   var result = 0,
 //       num_digits = [];
@@ -124,6 +126,7 @@
 // console.log(a(100)); //10
 // console.log(a(10)); //1
 // console.log(a(1245)); //245
+
 // ((((((first sol change to str and to number and check result))))))
 // let a=(num)=>{
 //   let n1=parseInt(num.toString().split('').slice(1).reduce((a,b)=>a+b))
@@ -133,12 +136,15 @@
 // console.log(a(100)); //10
 // console.log(a(10)); //1
 // console.log(a(1245)); //245
+
 // let a=10
 // let b=parseInt(a)
 // console.log(b)
+
 // let a='10'
 // let b=a.split('')
 // console.log(b)
+
 //((((((((((((((sec sol push result to arr and check arr and every el in the arr if delete first or div by 10 is bigger))))))))))))))
 // let a=(num)=>{
 //   var result=0,newNum=[]
@@ -188,3 +194,103 @@
 // console.log(c(10)); //1
 // console.log(c(1245)); //245
 //((((((((((((((4))))))))))))))
+// Write a JavaScript program to find two elements of an array such that their absolute difference is not larger than a given integer. However, it is as close as possible to the integer.
+// function different_values(ara, n) {
+//     var max_val = -1;
+//     for (var i = 0; i < ara.length; i++) {
+//         for (var j = i + 1; j < ara.length; j++) {
+//             var x = Math.abs(ara[i] - ara[j]);
+//             if (x <= n) {
+//                 max_val = Math.max(max_val, x)
+//             }
+//         }
+//     }
+//     return max_val
+// }
+// console.log(different_values([12, 10, 33, 34], 10));
+// console.log(different_values([12, 10, 33, 34], 24));
+// console.log(different_values([12, 10, 33, 44], 40));
+
+// let a=(arr,n)=>{
+//     let max=0;
+//     for (let index = 0; index < arr.length; index++) {
+//         for (let index2 = index+1; index2 < arr.length; index2++) {
+//             let diff=Math.abs(arr[index]-arr[index2])
+//             if(diff<=n){
+//                 max=Math.max(diff,max)
+//             }
+//         }
+//     }
+//     return max
+// }
+// console.log(a([12, 10, 33, 34], 10));
+// console.log(a([12, 10, 33, 34], 24));
+// console.log(a([12, 10, 33, 44], 40));
+//((((((((((((((5))))))))))))))
+// Write a JavaScript program to find the number of times to replace a given number with the sum of its digits. This is until it converts to a single-digit number.
+// function digit_to_one(num) {
+//   var digitSum = function (num) {
+//     var digit_sum = 0;
+//     while (num) {
+//       digit_sum += num % 10;
+//       num = Math.floor(num / 10);
+//     }
+
+//     return digit_sum;
+//   };
+
+//   var result = 0;
+
+//   while (num >= 10) {
+//     result += 1;
+//     num = digitSum(num);
+//   }
+
+//   return result;
+// }
+
+// console.log(digit_to_one(123));
+// console.log(digit_to_one(156));
+// var digitSum = function (num) {
+//   var digit_sum = 0;
+//   while (num) {
+//     digit_sum += num % 10;
+//     num = Math.floor(num / 10);
+//   }
+
+//   return digit_sum;
+// };
+// console.log(digitSum(123))
+
+// let a=(num)=>{
+//   let b=(num)=>{
+//     let sum=0;
+//     while(num){
+//       sum+=num%10
+//       num=Math.floor(num/10)
+//     }
+//     return sum
+//   }
+//   let res=0
+//   while(num>=10){
+//     res+=1
+//     num=b(num)
+//   }
+//   return res
+// }
+// console.log(a(123))
+// console.log(a(156));
+//((((((((((((((6))))))))))))))
+// Write a JavaScript program to divide an integer by another integer as long as the result is an integer and return the result.
+// let a=(n1,n2)=>{
+//   if(n2==1){return n1}else{
+//     while(n1%n2===0){
+//       n1/=n2
+//     }
+//   }
+//   return n1
+// }
+// console.log(a(-12, 2))
+// console.log(a(13, 2))
+// console.log(a(13, 1))
+//((((((((((((((7))))))))))))))
