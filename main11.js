@@ -294,3 +294,188 @@
 // console.log(a(13, 2))
 // console.log(a(13, 1))
 //((((((((((((((7))))))))))))))
+// Write a JavaScript program to find the number of sorted pairs formed by arrays of integers. This is such that one element in the pair is divisible by the other one.
+// For example - The output of [1, 3, 2] ->2 - (1,3), (1,2).
+// The output of [2, 4, 6] -> 2 - (2,4), (2,6)
+// The output of [2, 4, 16] -> 3 - (2,4), (2,16), (4,16)
+// function arr_pairs(arr) {
+//     var result = 0;
+//     for (var i = 0; i < arr.length; i++)
+//         {
+//         for (var j = i + 1; j < arr.length; j++)
+//             {
+//               if (arr[i] % arr[j] === 0 || arr[j] % arr[i] === 0)
+//                 {
+//                 result++;
+//                 }
+//          }
+//       }
+//     return result;
+// }
+// console.log(arr_pairs([1,2,3]))
+// console.log(arr_pairs([2,4,6]))
+// console.log(arr_pairs([2,4,16]))
+
+// let a=(arr)=>{
+//     let result=0;
+//     for (let index = 0; index < arr.length; index++) {
+//         for (let index2 = index+1; index2 < arr.length; index2++) {
+//             arr[index]%arr[index2]===0||arr[index2]%arr[index]===0?result++:''
+//         }
+
+//     }
+//     return result
+// }
+// console.log(a([1,2,3]))
+// console.log(a([2,4,6]))
+// console.log(a([2,4,16]))
+//((((((((((((((8))))))))))))))
+// Write a JavaScript program to create the dot products of two given 3D vectors.
+// Note: The dot product is the sum of the products of the corresponding entries of the two sequences of numbers.
+// function dot_product(vector1, vector2) {
+//     var result = 0;
+//     for (var i = 0; i < 3; i++) {
+//       result += vector1[i] * vector2[i];
+//     }
+//     return result;
+//   }
+//   console.log(dot_product([1,2,3], [1,2,3]))
+//   console.log(dot_product([2,4,6], [2,4,6]))
+//   console.log(dot_product([1,1,1], [0,1,-1]))
+
+// let a=(arr1,arr2)=>{
+//     let result=0;
+//     for (let index = 0; index < 3; index++) {
+//         result+=arr1[index]*arr2[index]
+//     }
+//     return result
+// }
+//   console.log(a([1,2,3], [1,2,3]))
+//   console.log(a([2,4,6], [2,4,6]))
+//   console.log(a([1,1,1], [0,1,-1]))
+//((((((((((((((9))))))))))))))
+// Write a JavaScript program to sort an array of all prime numbers between 1 and a given integer.
+// function sort_prime(num) {
+//   var prime_num1 = [],
+//     prime_num2 = [];
+//   for (var i = 0; i <= num; i++) {
+//     prime_num2.push(true);
+//   }
+//   for (var i = 2; i <= num; i++) {
+//     if (prime_num2[i]) {
+//       prime_num1.push(i);
+//       for (var j = 1; i * j <= num; j++) {
+//         prime_num2[i * j] = false;
+//       }
+//     }
+//   }
+//   return prime_num1;
+// }
+
+// console.log(sort_prime(5));
+// console.log(sort_prime(11));
+// console.log(sort_prime(23));
+// let a = (num) => {
+//   let arr = [],
+//     checkArr = [];
+//   for (let index = 0; index <= num; index++) {
+//     checkArr.push(true);
+//   }
+//   //prime number start from 2 prime number can not divide except itself and 1
+//   for (let index = 2; index <= num; index++) {
+//     if (checkArr[index]) {
+//       arr.push(index);
+//       for (let index2 = 1; index2 * index <= num; index2++) {
+//         checkArr[index * index2] = false;
+//       }
+//     }
+//   }
+//   return arr;
+// };
+// console.log(a(5));
+// console.log(a(11));
+// console.log(a(23));
+
+// let b = (num) => {
+//   let arr = [];
+//   let checkArr = [];
+//   for (let index = 0; index <= num; index++) {
+//     checkArr.push(true);
+//   }
+//   for (let index = 2; index <= num; index++) {
+//     if (checkArr[index]) {
+//         arr.push(index);
+//       for (let index2 = 1; index2 * index <= num; index2++) {
+//         checkArr[index * index2] = false;
+//       }
+//     }
+//   }
+//   return arr;
+// };
+// console.log(b(5));
+// console.log(b(11));
+// console.log(b(23));
+// function test(num) {
+//   var arr = [];
+//   for (var i = 1; i <= num; i++) {
+//     var notPrime = false;
+//     for (var j = 2; j < i - 1; j++) {
+//       if (i % j === 0) {
+//         notPrime = true;
+//       }
+//     }
+//     if (notPrime === false) {
+//       arr.push(i);
+//     }
+//   }
+//   return arr;
+// }
+// console.log(test(21));
+// let a=(num)=>{
+//     let arr=[],notPrime=false;
+//     for (let index = 1; index <=num; index++) {
+//         notPrime=false;
+//         for (let index2 = 2; index2 <index-1; index2++) {
+//             if(index%index2==0){notPrime=true}
+//         }
+//         notPrime==false?arr.push(index):''
+//     }
+//     return arr
+// }
+// console.log(a(21));
+//((((((((((((((10))))))))))))))
+// Write a JavaScript program to find the number of even values in sequence before the first occurrence of a given number.
+// Sample sequence = [1,2,3,4,5,6,7,8]
+// Given number: 5
+// Output: 2
+// function find_numbers(arr_num, num) {
+//     var result = 0;
+//     for (var i = 0; i < arr_num.length; i++)
+//     {
+//         if (arr_num[i] % 2 === 0 && arr_num[i] !== num) {
+//             result++;
+//         }
+//         if (arr_num[i] === num) 
+//         {
+//             return result;
+//         }
+//     }
+//     return -1;
+// }
+
+// console.log(find_numbers([1,2,3,4,5,6,7,8], 5))
+// console.log(find_numbers([1,3,5,6,7,8], 6))
+// let a=(arr,n)=>{
+//     let result=0;
+//     for (let index = 0; index < arr.length; index++) {
+//         if (arr[index]%2===0&&arr[index]!==n) {
+//             result++
+//         }
+//         if (arr[index]===n) {
+//             return result
+//         }
+//     }
+//     return result-1
+// }
+// console.log(a([1,2,3,4,5,6,7,8], 5))
+// console.log(a([1,3,5,6,7,8], 6))
