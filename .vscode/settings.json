@@ -1,0 +1,26 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".vscode": true,
+        "build": true,
+        "img": true,
+        "tailwind.config.js": true,
+        "package-lock.json": true,
+        "package.json": true,
+        "src": true
+    },
+    "hide-files.files": [
+        ".vscode",
+        "build",
+        "img",
+        "tailwind.config.js",
+        "package-lock.json",
+        "package.json",
+        "src"
+    ]
+}
